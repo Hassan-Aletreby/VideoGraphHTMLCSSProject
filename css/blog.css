@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+}
+
+span {
+    font-size: 14px;
+    color: darkgrey;
+}
+
+body{
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    background-color: rgb(19, 3, 36);
+}
+
+.tittle {
+    background-image: url(../img/breadcrumb-bg.jpg);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.header {
+    height: 100px;
+    padding: 30px 0;
+}
+
+.header .logo {
+    width: 28%;
+    float: left;
+}
+
+.header .logo img {
+    width: 200px;
+}
+
+.header .nav {
+    width: 72%;
+    float: left;
+    margin-top: 10px;
+}
+.header .nav .li__item a{
+    font-size: 14px;
+}
+
+.header .nav .main__item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.drop__content {
+    position: absolute;
+    top: 30px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    max-height: 0;
+    transition: max-height .5s ease-in-out;
+}
+.drop li{
+    padding: 5px 20px;
+}
+.drop li a{
+    color: black;
+}
+.header .nav ul li:hover  .drop__content{
+    max-height: 300px;
+}
+
+.header .nav .drop__item a::after {
+   display: none;
+}
+.header .nav ul .active {
+    border-bottom: 3px solid aqua;
+    padding-bottom: 10px;
+}
+
+.header .nav .li__item{
+    float: left;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.header .nav .li__item a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: aqua;
+    bottom: 0px;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.3s;
+}
+
+.header .nav .li__item a:hover::after{
+    transform: scale(1);
+}
+
+.tittle hr{
+    border: 1px solid rgb(29, 29, 29);
+}
+
+.tittle .tittle__about {
+    text-align: center;
+    font-size: 32px;
+    line-height: 50px;
+    margin-top: 8%;
+}
+
+.tittle .tittle__about a{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.content {
+    padding: 100px 0;
+    color: white;
+}
+
+.content .nav ul{
+    width: 60%;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .nav ul li{
+    padding: 10px;
+}
+.content .nav ul li:first-child{
+    padding: 10px 20px;
+    border: 1px solid rgb(33, 83, 99);
+}
+
+.content .nav ul li a{
+    font-size: 16px;
+    color: darkgrey;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards .card__1 {
+    width: calc(95% / 3);
+    margin-bottom: 30px;
+    border: 1px solid rgba(46, 46, 46, 0.839);
+    text-align: left;
+    padding: 40px;
+    line-height: 35px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cards .card__1 .text {
+    position: relative;
+    display: block;
+    background-color: rgba(19, 3, 36, 0);
+    z-index: 1;
+}
+
+.cards .card__1 span {
+    font-size: 14px;
+    color: darkgrey;
+    font-weight: 100;
+    padding: 10px 0;
+}
+
+.cards .card__1 p {
+    font-size: 16px;
+    color: darkgrey;
+    font-weight: 300;
+}
+
+.cards .card__1 a {
+    display: block;
+    font-size: 18px;
+    margin: 20px 0 0 0;
+    width: 50%;
+}
+
+.cards .card__1:hover {
+    color: white;
+    z-index: 0;
+}
+
+.cards .card__1::after {
+    content: "";
+    background-image: url(../img/team-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    position: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.cards .card__1:hover::after {
+    position: absolute;
+}
+
+.last__content ul {
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.last__content .num {
+    padding: 15px 20px;
+    background-color: rgb(45, 40, 86);
+    
+    
+}
+.footer {
+    background-color: rgb(10, 10, 25);
+    color: white;
+    padding: 20px 0;
+}
+.footer__nav{
+    display: flex;
+    padding: 20px 0;
+    justify-content:flex-end;
+}
+
+.footer__nav>div{
+    width: 85%;
+}
+
+.footer__nav .footer__img img{
+    width: 200px;
+}
+
+.footer__nav .footer__icon {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__nav .footer__icon i{
+    font-size: 24px;
+}
+
+.footer__nav hr{
+    background-color: rgb(53, 53, 53);
+    height: 0.5px;
+}
+
+.footer__content{
+    display: flex;
+    color:darkgrey;
+    line-height: 30px;
+    padding: 70px 0;
+    justify-content: space-between;
+}
+
+.footer__content h2{
+    padding-bottom: 30px;
+    color: white;
+    font-size: 20px;
+}
+.footer__content p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer__content li a{
+    color: darkgrey;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer__content .content__about,.content__newsletter{
+    width: 30%;
+}
+
+.footer__content .content__we,.content__work{
+    width: 15%;
+}
+
+.content__newsletter input{
+    width: 85%;
+    height: 45px;
+    background-color: rgb(10, 10, 25);
+    border: 1px solid rgb(99, 98, 98);
+    color: white;
+    float: left;
+}
+
+.content__newsletter input::placeholder{
+    color: rgb(189, 189, 189);
+    padding: 20px;
+    font-size: 16px;
+}
+
+.content__newsletter .send {
+    width: 15%;
+    background-image:url(../img/png-transparent-telegram-icon-telegram-logo-telegram-app-social-icon-messaging-messenger-thumbnail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .lastest{
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    color: darkgrey;
+}
+
+.footer .lastest span{
+    color: rgb(73, 165, 223);
+}
+
+.footer hr {
+    border: 1px solid rgb(29, 29, 29);
+  }

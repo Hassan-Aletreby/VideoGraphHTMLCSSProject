@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+}
+
+span {
+    font-size: 14px;
+    color: darkgrey;
+}
+
+body{
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    background-color: rgb(19, 3, 36);
+}
+
+.tittle {
+    background-image: url(../img/breadcrumb-bg.jpg);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.header {
+    height: 100px;
+    padding: 30px 0;
+}
+
+.header .logo {
+    width: 28%;
+    float: left;
+}
+
+.header .logo img {
+    width: 200px;
+}
+
+.header .nav {
+    width: 72%;
+    float: left;
+    margin-top: 10px;
+}
+.header .nav .li__item a{
+    font-size: 14px;
+}
+
+.header .nav .main__item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.drop__content {
+    position: absolute;
+    top: 30px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    max-height: 0;
+    transition: max-height .5s ease-in-out;
+}
+.drop li{
+    padding: 5px 20px;
+}
+.drop li a{
+    color: black;
+}
+.header .nav ul li:hover  .drop__content{
+    max-height: 300px;
+}
+
+.header .nav .drop__item a::after {
+   display: none;
+}
+.header .nav ul .active {
+    border-bottom: 3px solid aqua;
+    padding-bottom: 10px;
+}
+
+.header .nav .li__item{
+    float: left;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.header .nav .li__item a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: aqua;
+    bottom: 0px;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.3s;
+}
+
+.header .nav .li__item a:hover::after{
+    transform: scale(1);
+}
+
+.tittle hr{
+    border: 1px solid rgb(29, 29, 29);
+}
+
+.tittle .tittle__about {
+    text-align: center;
+    font-size: 32px;
+    line-height: 50px;
+    margin-top: 8%;
+}
+
+.tittle .tittle__about a{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.motions__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+    line-height: 25px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.motions__cards h2 {
+    margin: 10px 0;
+}
+.motions__cards p{
+    color: darkgrey;
+    font-size: 16px;
+}
+
+.motion {
+    width: calc(95% / 3);
+    margin-top: 50px;
+}
+.motion .img {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.motion .img::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid aqua;
+    transition: all 0.5s ease-in-out;
+}
+
+.motion:hover .img::before{
+    transform: rotate(45deg);
+}
+
+
+.stories__content {
+    background-image: url(../img/calltos-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 150px;
+    text-align: center;
+}
+.stories__content h2 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+.stories__content p{
+    font-size: 16px;
+    color: darkgrey;
+    margin-bottom: 80px;
+}
+
+.stories__content a{
+    background-color: rgb(55, 175, 208);
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.logo__items {
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+ .logo__img {
+    width: calc(95% / 5);
+    text-align: center;
+ }
+
+ .logo__img img {
+    width: 80px;
+    height: 80px;
+ }
+
+.footer {
+    background-color: rgb(10, 10, 25);
+    color: white;
+    padding: 20px 0;
+}
+.footer__nav{
+    display: flex;
+    padding: 20px 0;
+    justify-content:flex-end;
+}
+
+.footer__nav>div{
+    width: 85%;
+}
+
+.footer__nav .footer__img img{
+    width: 200px;
+}
+
+.footer__nav .footer__icon {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__nav .footer__icon i{
+    font-size: 24px;
+}
+
+.footer__nav hr{
+    background-color: rgb(53, 53, 53);
+    height: 0.5px;
+}
+
+.footer__content{
+    display: flex;
+    color:darkgrey;
+    line-height: 30px;
+    padding: 70px 0;
+    justify-content: space-between;
+}
+
+.footer__content h2{
+    padding-bottom: 30px;
+    color: white;
+    font-size: 20px;
+}
+.footer__content p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer__content li a{
+    color: darkgrey;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer__content .content__about,.content__newsletter{
+    width: 30%;
+}
+
+.footer__content .content__we,.content__work{
+    width: 15%;
+}
+
+.content__newsletter input{
+    width: 85%;
+    height: 45px;
+    background-color: rgb(10, 10, 25);
+    border: 1px solid rgb(99, 98, 98);
+    color: white;
+    float: left;
+}
+
+.content__newsletter input::placeholder{
+    color: rgb(189, 189, 189);
+    padding: 20px;
+    font-size: 16px;
+}
+
+.content__newsletter .send {
+    width: 15%;
+    background-image:url(../img/png-transparent-telegram-icon-telegram-logo-telegram-app-social-icon-messaging-messenger-thumbnail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .lastest{
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    color: darkgrey;
+}
+
+.footer .lastest span{
+    color: rgb(73, 165, 223);
+}
+
+.footer hr {
+    border: 1px solid rgb(29, 29, 29);
+  }
